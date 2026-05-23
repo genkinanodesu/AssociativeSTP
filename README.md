@@ -19,6 +19,8 @@ software package.
 
 ## Setup
 
+The manuscript was generated with Python 3.14. Other versions are not tested.
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate

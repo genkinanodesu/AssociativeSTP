@@ -883,20 +883,17 @@ def simulate_trial_exact_grad(
             rate_int=float(rate_int),
             spike_log_rho_sum=float(spike_log_rho_sum),
         )
-    """
-    One simulation of duration T, returning exact-gradient components for shared parameters w0[k], U[k].
-
-    The simulation produces A and score_base = (C - B); if a baseline is supplied, we also
-    assemble score and grad via grad(b) = (A + (J_hat - b) * score_base) / N.
-
-    Implements Appendix eligibility updates for STD-only synapses:
-      d(t^+) = d(t^-)*(1-U)
-      sU(t^+) = (1-U) sU(t^-) - d(t^-)
-      eligibility jump at presyn spike:
-        e_w0 += ∂w/∂w0 = U d(t^-)
-        e_U  += ∂w/∂U  = w0 ( d(t^-) + U sU(t^-) )
-      and exponential decay between spikes (discretized with dt).
-    """
+    # Non-numba (pure-numpy) implementation follows.
+    # Returns exact-gradient components for shared parameters w0[k], U[k].
+    # The simulation produces A and score_base = (C - B); if a baseline is supplied, we also
+    # assemble score and grad via grad(b) = (A + (J_hat - b) * score_base) / N.
+    # Implements Appendix eligibility updates for STD-only synapses:
+    #   d(t^+) = d(t^-)*(1-U)
+    #   sU(t^+) = (1-U) sU(t^-) - d(t^-)
+    #   eligibility jump at presyn spike:
+    #     e_w0 += dw/dw0 = U d(t^-)
+    #     e_U  += dw/dU  = w0 ( d(t^-) + U sU(t^-) )
+    #   and exponential decay between spikes (discretized with dt).
     N = cfg.N
     dt = cfg.dt
     n_steps = int(np.round(cfg.T / dt))
