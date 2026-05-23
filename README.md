@@ -1,7 +1,7 @@
 # AssociativeSTP
 
-Companion code for the manuscript "Reshaping Neural Representation via
-Associative, Presynaptic Short-Term Plasticity."
+Companion code for the manuscript ["Reshaping Neural Representation via
+Associative, Presynaptic Short-Term Plasticity"](https://arxiv.org/abs/2601.10397).
 
 This repository contains the analysis notebooks, ring-network simulation code,
 cached simulation fits, and PDF outputs used for the manuscript figures. It is
