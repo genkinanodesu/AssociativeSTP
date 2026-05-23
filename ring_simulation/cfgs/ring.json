@@ -1,0 +1,45 @@
+{ 
+ "ring": {
+    "g_type": "sigmoid",
+    "g_m": 500,
+    "u_c": 3.0,
+    "A":1.0,
+    "n_iter": 50000, 
+    "snapshot_iters": [500, 1000, 2000, 5000, 10000, 20000, 30000, 40000, 50000],
+
+  "constrain_w0_l2": true,
+  "w0_l2_rms_max":  1.0,
+  "constrain_w0_sum": true,
+  "w0_sum_target": 0.0,
+  "constrain_U_sum": true,
+
+  "update_clip": null,
+  "score_clip_percentile": 95.0,
+  "score_median_clip_window": 100,
+  "score_median_clip_mult": 3.0,
+
+  "momentum": 0.9,
+  "nesterov": true,
+
+  "lr_w0": 1.0e-2,
+  "lr_U": 1.0e-3,
+
+  "snapshot_rate_trials": 100,
+  "snapshot_phase_bins": 64,
+  "asymmetry_rate_trials": 100,
+  "asymmetry_phase_bins": 64
+ 
+},
+ "replay": {
+  "T": 10.0,"t_start": -4.0,
+  "plot_t_start": 0.0,
+  "plot_t_end":2.0,
+  "cue_start": 0.0,
+  "cue_duration": 0.0,
+  "cue_A": 0.0,
+  "h_bg_with_stp": 0.5,
+  "h_bg_pre_stp": 1.5,
+  "h_bg_no_stp": 1.0,
+  "bin_dt": 0.001
+ }
+}

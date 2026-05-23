@@ -1,0 +1,5 @@
+# Direct dependencies used by the manuscript code.
+numpy==2.3.5
+scipy==1.16.2
+matplotlib==3.10.7
+numba==0.63.1

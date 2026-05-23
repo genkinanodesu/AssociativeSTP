@@ -1,0 +1,18 @@
+{
+  "T": 10.0,
+  "bin_dt": 0.001,
+  "cue_A": 0.0,
+  "cue_center": 0.0,
+  "cue_duration": 0.0,
+  "cue_start": 0.0,
+  "cue_theta": 0.15707963267948966,
+  "h_bg": 1.0,
+  "h_bg_no_stp": 1.0,
+  "h_bg_pre_stp": 1.5,
+  "h_bg_with_stp": 0.5,
+  "n_trials": 5,
+  "plot_t_end": 2.0,
+  "plot_t_start": 0.0,
+  "seed": 123,
+  "t_start": -4.0
+}

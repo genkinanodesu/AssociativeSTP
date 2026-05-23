@@ -1,0 +1,102 @@
+{
+  "generated_at_utc": "2026-05-23T13:58:28.411138+00:00",
+  "cfg_path": "cfgs/ring.json",
+  "cfg_name": "ring",
+  "phase_trials": 8,
+  "fi_trials": 6,
+  "conditions": {
+    "with_stp": {
+      "label": "associative STP",
+      "run_cfg_name": "ring/with_stp",
+      "fit_path": "saved_runs/ring/with_stp/fit.npz",
+      "fi_init": {
+        "mean": 10.131466509848972,
+        "se": 0.0005357246952496013,
+        "n_trials": 6
+      },
+      "fi_final": {
+        "mean": 28.138301504041447,
+        "se": 0.214214331888407,
+        "n_trials": 6
+      },
+      "rate_init_peak_hz": 8.964980544747082,
+      "rate_final_peak_hz": 52.72727272727273,
+      "asymmetry_init": {
+        "peak_phase": 0.04908738521234057,
+        "centroid_phase": 0.0017444308300436763,
+        "skewness": -0.006931410014609121,
+        "area_index": 0.003423922433341938,
+        "odd_ratio": 0.01086367830425516
+      },
+      "asymmetry_final": {
+        "peak_phase": -0.14726215563702172,
+        "centroid_phase": 0.02759381810794814,
+        "skewness": 0.004383251476827478,
+        "area_index": 0.011633294461132248,
+        "odd_ratio": 0.026206026856422895
+      }
+    },
+    "pre_stp": {
+      "label": "non-associative STP",
+      "run_cfg_name": "ring/pre_stp",
+      "fit_path": "saved_runs/ring/pre_stp/fit.npz",
+      "fi_init": {
+        "mean": 10.130713422422907,
+        "se": 0.0010361528194421808,
+        "n_trials": 6
+      },
+      "fi_final": {
+        "mean": 18.631732105380888,
+        "se": 0.21347396514933561,
+        "n_trials": 6
+      },
+      "rate_init_peak_hz": 8.964980544747082,
+      "rate_final_peak_hz": 31.07831325301205,
+      "asymmetry_init": {
+        "peak_phase": 0.04908738521234057,
+        "centroid_phase": 0.0017444308300436763,
+        "skewness": -0.006931410014609121,
+        "area_index": 0.003423922433341938,
+        "odd_ratio": 0.01086367830425516
+      },
+      "asymmetry_final": {
+        "peak_phase": -0.04908738521234057,
+        "centroid_phase": 0.04045726492082475,
+        "skewness": -0.04391052618175652,
+        "area_index": 0.042067804130982704,
+        "odd_ratio": 0.03998933207236921
+      }
+    },
+    "no_stp": {
+      "label": "static",
+      "run_cfg_name": "ring/no_stp",
+      "fit_path": "saved_runs/ring/no_stp/fit.npz",
+      "fi_init": {
+        "mean": 10.150784900218529,
+        "se": 0.0014536283286130526,
+        "n_trials": 6
+      },
+      "fi_final": {
+        "mean": 14.437172885292519,
+        "se": 0.13886104635309982,
+        "n_trials": 6
+      },
+      "rate_init_peak_hz": 8.990272373540856,
+      "rate_final_peak_hz": 20.324701195219124,
+      "asymmetry_init": {
+        "peak_phase": 0.04908738521234057,
+        "centroid_phase": 0.0020357918848607453,
+        "skewness": -0.007100336348141164,
+        "area_index": 0.0036288161390135355,
+        "odd_ratio": 0.01090290401150674
+      },
+      "asymmetry_final": {
+        "peak_phase": 0.14726215563702172,
+        "centroid_phase": -0.012067022987792792,
+        "skewness": -0.008357306237028465,
+        "area_index": 0.0034265017021352577,
+        "odd_ratio": 0.02736129468805238
+      }
+    }
+  }
+}
